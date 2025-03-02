@@ -1,0 +1,20 @@
+[
+    {
+      "title": "Software Engineer",
+      "skills": ["Python", "JavaScript", "React"],
+      "education": ["Computer Science"],
+      "experience": ["2+ years"]
+    },
+    {
+      "title": "Data Scientist",
+      "skills": ["Python", "Machine Learning", "Pandas"],
+      "education": ["Data Science"],
+      "experience": ["3+ years"]
+    },
+    {
+      "title": "Frontend Developer",
+      "skills": ["JavaScript", "React", "HTML", "CSS"],
+      "education": ["Computer Science"],
+      "experience": ["1+ years"]
+    }
+  ]
