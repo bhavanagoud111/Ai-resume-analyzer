@@ -1,0 +1,12 @@
+Flask
+Flask-CORS
+gunicorn
+numpy
+pandas
+scikit-learn
+nltk
+PyPDF2
+pdfminer.six
+spacy
+transformers
+torch
