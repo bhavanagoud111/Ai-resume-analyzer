@@ -3,6 +3,9 @@ import axios from "axios";
 import { ClipLoader } from "react-spinners";
 import { TextField, Button, Typography, List, ListItem, Paper } from "@mui/material";
 
+// Backend URL; override with REACT_APP_API_URL if the backend runs elsewhere.
+const API_URL = process.env.REACT_APP_API_URL || "http://127.0.0.1:8000";
+
 function App() {
   // Define state variables
   const [resumeText, setResumeText] = useState("");
@@ -18,13 +21,13 @@ function App() {
     setError(null);
     try {
       // Send resume text to the backend for analysis
-      const analysisResponse = await axios.post("http://127.0.0.1:5000/analyze", {
+      const analysisResponse = await axios.post(`${API_URL}/analyze`, {
         resume: resumeText,
       });
       setAnalysis(analysisResponse.data);
 
       // Get job recommendations based on the analysis
-      const recommendationsResponse = await axios.post("http://127.0.0.1:5000/recommend", {
+      const recommendationsResponse = await axios.post(`${API_URL}/recommend`, {
         analysis: analysisResponse.data,
       });
       setRecommendations(recommendationsResponse.data);
